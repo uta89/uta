@@ -1,0 +1,346 @@
+/*
+Theme Name: desafio-theme
+*/
+
+/*Theme.css*/
+/* =========================
+   Theme Variables
+========================= */
+:root {
+  --font-size: 16px;
+
+  --background: #0a0a0a;
+  --foreground: #f5f5f7;
+
+  --card: #1a1a1a;
+  --card-foreground: #f5f5f7;
+
+  --primary: #2c2c2c;
+  --secondary: #4a4a4a;
+
+  --muted: #262626;
+  --muted-foreground: #a1a1a6;
+
+  --accent: #E63946;
+  --accent-foreground: #ffffff;
+  --accent-orange: #FF9F1C;
+  --accent-yellow: #FFD60A;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --input-background: #1a1a1a;
+
+  --radius: 4px;
+
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+}
+
+/* ダークモード（class="dark"付けた時だけ効く） */
+.dark {
+  --background: #1a1a1a;
+  --foreground: #f5f5f7;
+  --card: #2c2c2c;
+  --primary: #f5f5f7;
+}
+
+/* =========================
+   Base Styles（@apply削除して手書き）
+========================= */
+* {
+  border-color: var(--border);
+  outline-color: rgba(230, 57, 70, 0.5);
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+/* =========================
+   Typography
+========================= */
+h1 {
+  font-size: 32px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+}
+
+label,
+button {
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+}
+
+input {
+  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+}
+
+/* =========================
+   Header（ついでに直す）
+========================= */
+.c-header {
+  background-color: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.c-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ナビ右寄せ */
+.c-header__nav {
+  margin-left: auto;
+}
+
+.c-nav {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.c-nav a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.c-nav a:hover {
+  color: var(--accent);
+}
+
+/*ここまで*/
+
+/*Abouページ*/
+/* Layout */
+.l-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.l-container--narrow {
+  max-width: 800px;
+}
+
+/* Section */
+.c-section {
+  padding: 96px 0;
+}
+
+.c-section--bg {
+  background: #f7f7f7;
+}
+
+/* Hero */
+.c-hero {
+  position: relative;
+  padding: 120px 0;
+}
+
+.c-hero__title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.c-hero__subtitle {
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+/* Grid */
+.c-grid {
+  display: grid;
+  gap: 32px;
+}
+
+.c-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.c-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Card */
+.c-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Utility */
+.u-accent {
+  color: #ff6600;
+}
+/*Aboutページここまで*/
+
+/*Contactページ*/
+.c-form-group {
+  margin-bottom: 24px;
+}
+
+.c-form-group input,
+.c-form-group textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.c-btn {
+  background: #ff6600;
+  color: #fff;
+  padding: 16px;
+  width: 100%;
+  border: none;
+}
+/*Contactページここまで*/
+
+/*Homeのcss*/
+.c-hero {
+  padding: 120px 0;
+}
+
+.c-hero__title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.c-scroll-banner {
+  overflow: hidden;
+  background: #ff6600;
+}
+
+.c-scroll-text {
+  white-space: nowrap;
+  display: inline-block;
+  padding-left: 100%;
+}
+
+/* CTA */
+.c-cta {
+  padding: 100px 0;
+  text-align: center;
+}
+/*Homeのcssここまで*/
+
+/*footerのcss*/
+.c-footer {
+  background: #111;
+  color: #fff;
+  padding: 80px 0 40px;
+}
+
+.c-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.c-footer__links li {
+  margin-bottom: 10px;
+}
+
+.c-footer__tags span {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid #444;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.c-footer__bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+}
+/*footerのcss*/
+
+/*headerのcss*/
+.c-header {
+  background-color: color-mix(in oklab, var(--card) 80%, transparent);
+  backdrop-filter: blur(10px); /* あると今っぽい */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.c-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ←これで左右に分かれる */
+}
+
+/* ナビを右寄せ */
+.c-header__nav {
+  margin-left: auto;
+}
+
+/* リストの黒ポチを消す */
+.c-nav li{
+  list-style: none;
+  float: right;
+  margin: 10px;
+}
+
+/* ulの横並び */
+.c-nav {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* リンク見た目 */
+.c-nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.pc-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .pc-only {
+    display: block;
+  }
+}
+/*headerのcss*/
+
+/**ui>accordion */
+.c-accordion__content {
+  display: none;
+}
+
+.c-accordion__content.is-open {
+  display: block;
+}
