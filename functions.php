@@ -28,11 +28,14 @@ function theme_customize_register($wp_customize) {
 }
 add_action('customize_register', 'theme_customize_register');
 
+/*
 function theme_scripts() {
   wp_enqueue_style('main-style', get_stylesheet_uri());
 }
+  */
+/*
 add_action('wp_enqueue_scripts', 'theme_scripts');
-
+*/
 add_action('init', function () {
   if (!isset($_POST['contact_submit'])) return;
   if (!wp_verify_nonce($_POST['contact_nonce'], 'contact_form')) return;
@@ -51,3 +54,16 @@ add_action('init', function () {
   wp_redirect(home_url('/contact?success=1'));
   exit;
 });
+
+function theme_scripts() {
+  wp_enqueue_style('main-style', get_stylesheet_uri());
+
+  wp_enqueue_script(
+    'main-script',
+    get_template_directory_uri() . '/main.js',
+    [],
+    false,
+    true
+  );
+}
+add_action('wp_enqueue_scripts', 'theme_scripts');

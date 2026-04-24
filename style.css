@@ -98,12 +98,15 @@ input {
 }
 
 /* =========================
-   Header（ついでに直す）
+   Header
 ========================= */
+
 .c-header {
-  background-color: rgba(26, 26, 26, 0.8);
+  /* background-color: rgba(26, 26, 26, 0.8); */
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  background-color: color-mix(in oklab, var(--card) 80%, transparent);
 }
 
 .c-header__inner {
@@ -112,26 +115,33 @@ input {
   align-items: center;
 }
 
-/* ナビ右寄せ */
+/* ナビを右寄せ */
 .c-header__nav {
   margin-left: auto;
 }
 
-.c-nav {
-  display: flex;
-  gap: 24px;
-  list-style: none;
+
+/*Headerのメディアクエリ設定*/
+ 
+.c-header__toggle {
+  display: none;
 }
 
-.c-nav a {
-  color: var(--foreground);
-  text-decoration: none;
-  transition: 0.2s;
+.c-header__mobile{
+  display: none;
 }
 
-.c-nav a:hover {
-  color: var(--accent);
+.c-header__mobile.is-open{
+  /*本当はc-header__toggle押下時に開くようにしたい*/
+  display: block;
 }
+
+@media (max-width: 767px) {
+  .c-header__toggle {
+    display: block;
+  }
+}
+
 
 /*ここまで*/
 
@@ -284,23 +294,6 @@ input {
 }
 /*footerのcss*/
 
-/*headerのcss*/
-.c-header {
-  background-color: color-mix(in oklab, var(--card) 80%, transparent);
-  backdrop-filter: blur(10px); /* あると今っぽい */
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.c-header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* ←これで左右に分かれる */
-}
-
-/* ナビを右寄せ */
-.c-header__nav {
-  margin-left: auto;
-}
 
 /* リストの黒ポチを消す */
 .c-nav li{
@@ -323,18 +316,13 @@ input {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
+  color: var(--foreground);
+  transition: 0.2s;
 }
 
-.pc-only {
-  display: none;
+.c-nav a:hover {
+  color: var(--accent);
 }
-
-@media (min-width: 768px) {
-  .pc-only {
-    display: block;
-  }
-}
-/*headerのcss*/
 
 /**ui>accordion */
 .c-accordion__content {

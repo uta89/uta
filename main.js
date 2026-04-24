@@ -41,3 +41,12 @@ document.querySelectorAll('.c-accordion__trigger').forEach(btn => {
     content.classList.toggle('is-open');
   });
 });
+
+/**header用js */
+const toggle = document.querySelector('.c-header__toggle');
+const mobileMenu = document.querySelector('.c-header__mobile');
+console.log(toggle);
+
+toggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('is-open');
+});

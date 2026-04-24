@@ -17,7 +17,7 @@
     </a>
 
     <!-- PCナビ -->
-    <div class="c-header__nav pc-only">
+    <div class="c-header__nav">
       <?php
       wp_nav_menu([
         'theme_location' => 'global_menu',
@@ -28,14 +28,14 @@
     </div>
 
     <!-- ハンバーガー -->
-    <button class="c-header__toggle js-menu-toggle">
+    <button class="c-header__toggle">
       ☰
     </button>
 
   </nav>
 
   <!-- モバイルメニュー -->
-  <div class="c-header__mobile js-mobile-menu">
+  <div class="c-header__mobile">
     <?php
     wp_nav_menu([
       'theme_location' => 'global_menu',
