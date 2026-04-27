@@ -1,5 +1,4 @@
-/*Layoutの中身をheader/footerに分解する */
-/*Layoutの中身をheader/footerに分解する */
+<!-- Layoutを分割-->
 <footer class="c-footer">
   <div class="l-container">
 

@@ -4,6 +4,7 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
+  <!-- <?php get_template_directory_uri() . '/main.js' ?> -->
 </head>
 
 <body <?php body_class(); ?>>
@@ -25,7 +26,10 @@
         'menu_class' => 'c-nav'
       ]);
       ?>
+          <!--nav下の動く線-->
+    <span class="active-line"></span>
     </div>
+
 
     <!-- ハンバーガー -->
     <button class="c-header__toggle">

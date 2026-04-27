@@ -7,27 +7,55 @@
 
   <!-- スクロールテキスト -->
   <div class="c-scroll-banner">
-    <div class="c-scroll-text">
-      PASSION × CONNECTION × VALUE CREATION
+    <div class="c-scroll-track">
+      <div class="c-scroll-text">
+        PASSION × CONNECTION × VALUE CREATION
+      </div>      
+      <div class="c-scroll-text">
+        PASSION × CONNECTION × VALUE CREATION
+      </div>
+      <div class="c-scroll-text">
+        PASSION × CONNECTION × VALUE CREATION
+      </div>
+      <div class="c-scroll-text">
+        PASSION × CONNECTION × VALUE CREATION
+      </div>
     </div>
   </div>
 
   <!-- Vision -->
   <section class="c-section">
-    <div class="l-container c-grid c-grid--2">
-
-      <div>
-        <h2 class="c-title">Vision</h2>
-        <p>
-          仕事を通じて人生に情熱をもたらす...
-        </p>
+<!--メモhero 右側とcss共通っぽいけどいじってるからクラス名から変える必要あるかも-->
+    <div class="l-container grid">
+      <div class="c-main-vision-left">
+        <h2 class="c-title">
+        <span class="c-title_icon">⚡</span>
+        Vision
+        </h2>
+        <p>仕事は人生の大きな部分を占めています。だからこそ、私たちは<span class="c-title_accent">仕事を通じて人生に情熱をもたらす</span>ことを目指しています。</p>
+        <p>人とのご縁を大切にし、お客様一人ひとりに最適なソリューションを提供することで、共に成長していきます。</p>
       </div>
+      
+      <div class="card fade-in">
+        <div class="pill-list">
+          <div class="pill">
+            <span class="icon">🤝</span>
+            人とのご縁
+          </div>
 
+          <div class="pill accent">
+            <span class="icon">🔥</span>
+            情熱
+          </div>
+
+          <div class="pill">
+            <span class="icon">💎</span>
+            価値創出
+          </div>
+        </div>
+      </div>
       <div class="c-card">
-        <?php get_template_part('template-parts/value-pill', null, [
-          'icon' => '🤝',
-          'text' => '人とのご縁'
-        ]); ?>
+
       </div>
 
     </div>
