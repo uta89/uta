@@ -78,3 +78,16 @@ window.addEventListener("load", () => {
 });
 
 }
+
+/** */
+const el = document.querySelector('.c-card_indexVision');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      el.classList.add('show');
+    }
+  });
+});
+
+observer.observe(el);

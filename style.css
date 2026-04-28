@@ -374,14 +374,14 @@ input {
   }
 }
 
-/*hero の右側
-　heroのコンテンツ全体*/
+/*hero の右側*/
 .grid {
   align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 16px;
 }
+
 /*hero右側　カード全体*/
 .card {
   padding: 1.5rem;
@@ -390,10 +390,15 @@ input {
   text-align: center;
   border-radius: 8px;
   font-size: 36px;
+  gap:0.5rem;
   transition: all 0.3s ease;
 }
 
-.card:hover{
+.card:hover,
+.pill:hover,
+.pill-accent:hover{
+  /*cord...hero右柄
+  pill...mainページvision右側*/
   transform: scale(1.05);
 }
 
@@ -491,47 +496,70 @@ input {
 
 /*index.php Vision　右側*/
 /* カード */
-.card {
-  background: linear-gradient(to bottom right, #ffffff, #f3f4f6);
-  border: 1px solid #e5e7eb;
+ .c-card_indexVision {
+  background: var(--card);
+  border:1px solid rgba(221, 221, 221,0.2);
   border-radius: 0.5rem;
   padding: 2rem;
-
   opacity: 0;
   transform: scale(0.9);
   transition: all 0.6s ease;
 }
 
 /* 表示状態 */
-.card.show {
+ .c-card_indexVision.show {
   opacity: 1;
   transform: scale(1);
 }
 
-/* 縦並び */
-.pill-list > * + * {
-  margin-top: 1.5rem;
+/*heroのコンテンツ全体*/
+.grid-vision{
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
 }
 
-/* ピル */
+/* 縦並び */
+.pill-list{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Vison右側のカード */
 .pill {
+  font-size: 20px;
+  margin:10px;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  background: #f5f5f5;
+  gap: 8px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  border:1px solid rgba(221, 221, 221,0.2);
+  background-color: var(--background);
+  transition: all 0.3s ease;
 }
 
-/* 強調 */
-.pill.accent {
-  background: #6366f1;
-  color: #fff;
+/* Vision右側のカード　赤 */
+.pill-accent{
+  font-size: 20px;
+  margin:10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  border:1px solid var(--accent);
+  background:rgba(230, 57, 70,0.2);
+  color: var(--accent);
+  transition: all 0.3s ease;
 }
 
 /* アイコン */
 .icon {
-  font-size: 1.2rem;
+  font-size: 30px;
 }
 /*Homeのcssここまで*/
 

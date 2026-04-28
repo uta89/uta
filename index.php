@@ -26,7 +26,7 @@
   <!-- Vision -->
   <section class="c-section">
 <!--メモhero 右側とcss共通っぽいけどいじってるからクラス名から変える必要あるかも-->
-    <div class="l-container grid">
+    <div class="l-container grid-vision">
       <div class="c-main-vision-left">
         <h2 class="c-title">
         <span class="c-title_icon">⚡</span>
@@ -36,14 +36,14 @@
         <p>人とのご縁を大切にし、お客様一人ひとりに最適なソリューションを提供することで、共に成長していきます。</p>
       </div>
       
-      <div class="card fade-in">
+      <div class="c-card_indexVision">
         <div class="pill-list">
           <div class="pill">
             <span class="icon">🤝</span>
             人とのご縁
           </div>
 
-          <div class="pill accent">
+          <div class="pill-accent">
             <span class="icon">🔥</span>
             情熱
           </div>
@@ -54,10 +54,6 @@
           </div>
         </div>
       </div>
-      <div class="c-card">
-
-      </div>
-
     </div>
   </section>
 
