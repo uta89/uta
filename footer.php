@@ -7,10 +7,10 @@
       <!-- Company -->
       <div class="c-footer__col">
         <h3 class="c-footer__logo">
-          desafio <span class="c-footer__icon">♥</span>
+          desafio
         </h3>
         <p>仕事と、人生に、情熱を</p>
-        <p class="c-footer__sub">人とのご縁で価値を創出する</p>
+        <p>人とのご縁で価値を創出する</p>
       </div>
 
       <!-- Links -->
@@ -28,10 +28,10 @@
       <div class="c-footer__col">
         <h4>事業内容</h4>
         <div class="c-footer__tags">
-          <span>営業代行</span>
-          <span>キャリア支援</span>
-          <span>不動産営業支援</span>
-          <span>イベント事業</span>
+          <span class="tags-red">営業代行</span>
+          <span class="tags-orange">キャリア支援</span>
+          <span class="tags-yellow">不動産営業支援</span>
+          <span class="tags-red">イベント事業</span>
         </div>
       </div>
 
@@ -42,7 +42,7 @@
       <p>
         © <?php echo date('Y'); ?> desafio. All rights reserved.
       </p>
-      <p>Made with ♥ and Passion</p>
+      <!-- <p>Made with ♥ and Passion</p> -->
     </div>
 
   </div>
